@@ -1,0 +1,111 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../js/globals.js"></script>
+    <script type="text/javascript" src="../js/timer.js"></script>
+    <script src="../js/game.js"></script>
+    <script type="text/javascript" src="../js/jquery.tmpl.js"></script>
+    <script id="messageTemplate" type="text/html">
+
+        <div class="msg">
+            <div class="msg_txt">
+                ${msg}
+            </div>
+            <div class="end_img">
+                <img src="${end_img}"/>
+            </div>
+            <div class='end_stats'>
+                <div style="float:left; width:75px; padding-right:20px;">
+                    <div>
+                        <img src="images/rocket_ship_red.png"/>
+                    </div>
+                    <div>
+                        ${rocket_1_time}
+                    </div>
+                </div>
+                <div style="float:left; width:75px; padding-left:20px;">
+                    <div>
+                        <img src="images/rocket_ship_pink.png"/>
+                    </div>
+                    <div>
+                        ${rocket_2_time}
+                    </div>
+                </div>
+                <div style="float:left; width:75px; padding-left:20px;">
+                    <div>
+                        <img src="images/rocket_ship_orange.png"/>
+                    </div>
+                    <div>
+                        ${rocket_3_time}
+                    </div>
+                </div>
+                <div style="float:left; width:75px; padding-left:20px;">
+                    <div>
+                        <img src="images/rocket_ship_yellow.png"/>
+                    </div>
+                    <div>
+                        ${rocket_4_time}
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        </div>
+
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="chat_window_conatiner">
+            <!-- <div id="clock"></div> -->
+            <div id="game_timer" class="timer_style">
+                <div class='indicator_label' style="width:250px; padding-bottom:8px"><b>Time Remaining:</b></div>
+                <span class="minute">00</span>:<span class="second">00</span>
+            </div>
+           <div id="instrucitons" class='indicator_label'><b>Run away from the player who is "it" for as long as you can!</b></div>
+            <div class='indicator_label' style="width:250px;"><b>Player's Time:</b></div>
+            <div id="rocket_1_timer" class="timer_style">
+                <span class="minute">00</span>:<span class="second">00</span>
+                <div class='indicator_label'>leader</div>
+            </div>
+            <div id="rocket_2_timer" class="timer_style">
+                <span class="minute">00</span>:<span class="second">00</span>
+                <div class='indicator_label'>leader</div>
+            </div>
+            <div id="rocket_3_timer" class="timer_style">
+                <span class="minute">00</span>:<span class="second">00</span>
+                <div class='indicator_label'>leader</div>
+            </div>
+            <div id="rocket_4_timer" class="timer_style">
+                <span class="minute">00</span>:<span class="second">00</span>
+                <div class='indicator_label'>leader</div>
+            </div>
+            <div style="clear:both;"></div>
+            </br>
+            <div class="chat_window">
+                <ul id="incomingChatMessages" class="text_style"></ul>
+                <input type="text" id="outgoingChatMessage" class="text_style">
+            </div>
+        </div>
+
+        <div class="game_window">
+            <div style="top:0; left:0" class="rocket_ship" id="rocket_1">
+                <img src="images/rocket_ship_red.png"/>
+            </div>
+            <div style="top:600; left:0" class="rocket_ship" id="rocket_2">
+                <img src="images/rocket_ship_pink.png"/>
+            </div>
+            <div style="top:0; left:600" class="rocket_ship" id="rocket_3">
+                <img src="images/rocket_ship_orange.png"/>
+            </div>
+            <div style="top:600; left:600" class="rocket_ship" id="rocket_4">
+                <img src="images/rocket_ship_yellow.png"/>
+            </div>
+            <div class="message">
+                <div class="message_content"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* globals */
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.wrapper{
+    width: 1444;
+}
+
+
+
+/* chat window */
+.chat_window_conatiner{
+    padding:20px 20px 0px;
+    float:left;
+    width: 250px;
+    height: 655px;
+    background-color: #ffffff;
+    border: 1px black solid;
+    overflow-y: hidden;
+
+}
+.chat_window{
+    padding: 10px 0px 0px;
+    margin-top: 0;
+    width: 270px;
+    height: 473px;
+    overflow-y: auto;
+}
+#incomingChatMessages{
+    padding-left: 3px;
+    font-family: "Arial";
+    font-size: 12pt;
+    padding-bottom: 20px;
+}
+#incomingChatMessages li{
+    list-style: none;
+}
+#outgoingChatMessage{
+    margin-bottom: 60px;
+    font-family: "Arial";
+    font-size: 12pt;
+    padding-bottom: 20px;
+}
+.title{
+    font-family: "Arial";
+    font-size: 12pt;
+    padding-bottom: 20px;
+}
+.indicator_label{
+    font-family: "Arial";
+    font-size: 10pt;
+    padding: 0px;
+    font-weight: normal;
+    color: black;
+    line-height: 0px;
+}
+#instrucitons{
+    line-height: 18px;
+    width: 190px;
+    color: #999999;
+    padding-bottom: 30px;
+}
+
+
+
+/* game window */
+.game_window{
+    position:relative;
+    float:left;
+    width: 675px;
+    height: 675px;
+    background-color: #39baec;
+    border: 1px black solid;
+}
+
+
+
+/* rockets */
+.rocket_ship{
+    position: absolute;
+    width: 75px;
+    height: 75px;
+}
+
+
+
+/* end game message */
+.message{
+    position: absolute;
+    width: 675px;
+    height: 675px;
+    top: 0;
+    left: 0;
+    background: #39baec;
+    display: none;
+}
+.message_content{
+    padding:30px;
+    text-align: center;
+}
+.end_stats{
+    position: relative;
+    width: 190px;
+    margin: 0 auto;
+    font-size: 30px;
+    font-family: Arial;
+    color: white;
+    font-weight: bold;
+    padding-top: 44px;
+}
+.msg_txt{
+    font-size: 50px;
+    font-family: Arial;
+    color: white;
+    font-weight: bold;
+    padding: 20px 70px;
+}
+.end_img{
+    padding-top: 33px;
+    margin-left: -39px;
+}
+
+
+
+
+/* main game timer */
+.timer_style {
+    font-size: 40px;
+    font-family: Arial;
+    color: #39baec;
+    font-weight: bold;
+    padding-bottom: 10px;
+    width:100px;
+    height:50px;
+    line-height:50px;
+    text-align:left;
+}
+
+#rocket_1_timer.timer_style{
+    color: red;
+    font-size: 20px;
+    float: left;
+}
+
+
+#rocket_2_timer.timer_style{
+    color: #ff0099;
+    font-size: 20px;
+    float: left;
+}
+
+#rocket_3_timer.timer_style{
+    color: #f98403;
+    font-size: 20px;
+    float: left;
+}
+
+#rocket_4_timer.timer_style{
+    color: #e9e610;
+    font-size: 20px;
+    float: left;
+}

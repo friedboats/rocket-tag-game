@@ -1,0 +1,15 @@
+{
+  "name": "rocket-tag-game",
+  "version": "1.0.0",
+  "description": "tag game",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nick Bence",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^3.21.2",
+    "socket.io": "^0.9.19"
+  }
+}
